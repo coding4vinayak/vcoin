@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Coin Mining Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    <p>Current Coin Value: {{ coin_value }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Coins Mined</th>
+                <th>Questions Solved</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set rank = 1 %}
+            {% for username, info in users %}
+            <tr>
+                <td>{{ rank }}</td>
+                <td>{{ username }}</td>
+                <td>{{ info.coins }}</td>
+                <td>{{ info.solved_questions }}</td>
+            </tr>
+            {% set rank = rank + 1 %}
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('home') }}">Mine More Coins!</a>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

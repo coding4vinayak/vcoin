@@ -1,0 +1,17 @@
+{
+    "users": {
+        "vinayak": {
+            "coins": 2,
+            "solved_questions": 2
+        },
+        "raj": {
+            "coins": 1,
+            "solved_questions": 1
+        },
+        "kk": {
+            "coins": 1,
+            "solved_questions": 1
+        }
+    },
+    "total_mined_coins": 4
+}

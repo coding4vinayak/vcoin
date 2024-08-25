@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCOIN 🪙</title>
+</head>
+<body>
+    <h1>Mine your Vcoin 🪙  </h1>
+
+    <form action="{{ url_for('answer') }}" method="POST">
+        <label for="username">Enter your username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="question">Solve the question:</label><br>
+        <strong>{{ question }}</strong><br><br>
+
+        <input type="hidden" name="correct_answer" value="{{ answer }}">
+        <input type="number" id="answer" name="answer" required><br><br>
+
+        <input type="submit" value="Submit Answer">
+    </form>
+
+    <a href="{{ url_for('leaderboard') }}">View Leaderboard</a>
+</body>
+</html>
+<h2>you can contact vinayak for your coin🤣 </h2>
