@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Article Summarizer</h1>
+        <form method="POST">
+            <textarea name="article_text" placeholder="Enter article text here..."></textarea>
+            <button type="submit">Summarize</button>
+        </form>
+        {% if summary %}
+            <h2>Summary:</h2>
+            <div class="summary">{{ summary }}</div>
+        {% endif %}
+    </div>
+    <footer>
+        &copy; @coding4vinayak
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

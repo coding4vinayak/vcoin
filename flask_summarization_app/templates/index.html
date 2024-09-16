@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home - Summarization App</title>
+</head>
+<body>
+    <header>
+        <h1>Summarization App</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to the Summarization App</h2>
+        <ul>
+            <li><a href="{{ url_for('text_summarization') }}">Text Summarization</a></li>
+            <li><a href="{{ url_for('audio_summarization') }}">Audio Summarization</a></li>
+            <li><a href="{{ url_for('image_summarization') }}">Image Summarization</a></li>
+        </ul>
+    </div>
+</body>
+</html>

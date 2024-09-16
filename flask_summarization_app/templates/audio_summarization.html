@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Audio Summarization</title>
+</head>
+<body>
+    <header>
+        <h1>Audio Summarization</h1>
+    </header>
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="audio">Upload Audio File:</label>
+                <input type="file" id="audio" name="audio" accept="audio/*" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Summarize</button>
+            </div>
+        </form>
+        {% if summary %}
+            <h2>Summary:</h2>
+            <p>{{ summary }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
